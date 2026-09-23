@@ -1,0 +1,128 @@
+/* Universal Styles*/
+*{
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: medium;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Header Styles*/
+header{
+  padding: 10px 20px;
+  margin: 20px;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  background-color: lavender;
+  text-align: center;
+  line-height: 40px;
+}
+
+header > h1{
+  font-size: xx-large;
+  font-weight: bolder;
+  color: black;
+}
+
+header > small{
+  font-size: medium;
+}
+
+/* Form Styles */
+#formContainer{
+  padding: 20px 30px;
+  margin: 20px;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  background-color: lavender;
+}
+
+#formContainer > #studentForm >.input-fields > label{
+  font-weight: bold;
+  font-size: large;
+  margin-bottom: 5px;
+}
+
+#formContainer > #studentForm >.input-fields > input{
+  border: 2px solid grey;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+#formContainer > #studentForm >.input-fields{
+  display:flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.list-item{
+  padding: 20px 30px;
+  margin: 20px;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  background-color: lavender;
+  line-height: 30px;
+}
+
+article.list-item > h2{
+  font-size: large;
+  font-weight: normal;
+  color: black;
+}
+
+article.list-item > p{
+  font-size: large;
+  font-weight: normal;
+  color: black;
+}
+
+article.list-item > button{
+   padding: 2px 3px;
+   border-radius: 10px;
+   background-color: slategrey;
+   color: white;
+   cursor: pointer;
+}
+
+article.list-item > button:hover{
+    background-color: silver;
+}
+
+#formContainer > #studentForm :last-child > button{
+    padding: 5px 5px;
+    border-radius: 10px;
+    background-color: slategray;
+    color: white;
+    cursor: pointer;
+}
+
+#formContainer > #studentForm :last-child > button:hover{
+    background-color: grey;
+}
+
+#studentList{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+}
+
+/*Mobile*/
+@media (width < 320px){
+    #studentList > .list-item{
+        grid-column: span 12;
+    }
+}
+
+/*Tablet*/
+@media (width > 320px) and (width <= 600px){
+    #studentList > .list-item{
+        grid-column: span 4;
+    }
+}
+
+/*Desktop/Laptop*/
+@media (width > 1000px){
+    #studentList > .list-item{
+        grid-column: span 2;
+    }
+}
